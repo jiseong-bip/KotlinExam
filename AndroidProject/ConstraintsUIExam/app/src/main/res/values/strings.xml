@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ConstraintsUIExam</string>
+
+    <string name="user_ID">아이디</string>
+    <string name="user_PW">패스워드</string>
+    <string name="confirm">확인</string>
+    <string name="cancle">취소</string>
+</resources>
