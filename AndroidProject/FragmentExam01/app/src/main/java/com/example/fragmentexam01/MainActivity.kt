@@ -38,12 +38,17 @@ class MainActivity : AppCompatActivity() {
                 }
                 true
             }
+            //기본 메뉴로 설정
            selectedItemId = R.id.menu_home
         }
     }
 
     private fun onReplaceFragement(fragment: Fragment) {
-
+        /*
+        * transaction 시작 : supportFragmentManager.beginTransaction()
+        * fragment transaction : replace(R.id.fragmentContainerView, fragment)
+        * transaction 종료 : commit()
+        * */
         with(supportFragmentManager.beginTransaction()) {
             replace(R.id.fragmentContainerView, fragment)
         }.commit()

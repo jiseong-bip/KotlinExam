@@ -23,7 +23,7 @@ class FragmentList : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Log.d(TAG, "ListFragment - onAttacj() called")
+        Log.d(TAG, "ListFragment - onAttach() called")
     }
 
     override fun onCreateView(

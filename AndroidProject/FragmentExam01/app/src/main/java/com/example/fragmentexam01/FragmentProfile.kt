@@ -23,7 +23,7 @@ class FragmentProfile: Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Log.d(TAG, "ProfileFragment - onAttacj() called")
+        Log.d(TAG, "ProfileFragment - onAttach() called")
     }
 
     override fun onCreateView(
