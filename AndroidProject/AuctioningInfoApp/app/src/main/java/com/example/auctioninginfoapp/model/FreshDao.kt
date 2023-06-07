@@ -5,6 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 
+/** 데이터베이스 Access를 위한 Dao 인터페이스 */
 @Dao
 interface FreshDao {
     /** Fresh Entity에 검색한 경락가격정보 저장 */
@@ -30,3 +31,4 @@ interface FreshDao {
     @Query("DELETE FROM SaveItem WHERE id = :saveId")
     fun deleteSaveData(saveId: Long)
 }
+

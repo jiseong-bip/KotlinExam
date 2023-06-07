@@ -26,6 +26,7 @@ object NetworkModule {
      */
     fun makeHttpUrl(scode: String, date: String, amount: String): HttpUrl {
         //http://211.237.50.150:7080/openapi/
+        //http://211.237.50.150:7080/openapi
         return HttpUrl.Builder()
             .scheme("http")
             .host("211.237.50.150")

@@ -5,11 +5,11 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 
+/** 응답 코드 클래스 */
 data class ResultCode(
     val code: String, //메세지코드(INFO-000, INFO-100)
     val message: String//메세지
 )
-
 /** Moshi란?
  * JSON 과 객체 사이에서 직렬화와 역직렬화를 지원하는 라이브러리
  */
@@ -73,8 +73,8 @@ data class FreshData(
     var saveId: Long? = null,
 
     /** Entity 필드에 JSON 인코딩 방식 정의(Moshi-kotlin)
-    - JSON 데이터의 각 오브젝트({"ROW_NUM":1,...,"PRDLST_NM":"사과",...","SPCIES_NM":"후지",... })의
-    "name":"value"를 Entity의 각 필드의 값으로 변환
+       - JSON 데이터의 각 오브젝트({"ROW_NUM":1,...,"PRDLST_NM":"사과",...","SPCIES_NM":"후지",... })의
+         "name":"value"를 Entity의 각 필드의 값으로 변환
      */
     @Json(name = "PRDLST_NM")//품목명
     var mname: String,

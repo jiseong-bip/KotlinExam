@@ -32,9 +32,9 @@ class ResultAdapter : RecyclerView.Adapter<ItemViewHolder>() {
 }//end of ResultAdapter
 
 /** SaveFragment에서 DB에 저장된 검색 결과를 리사이클러뷰에 데이터를 보여주는 어댑터
-   - 검색된 결과(SAVE_ID)를 KEY로 FreshData 테이블에서 해당 id를 찾아 화면에 출력
-   - SAVE_ID로 저장된 모든 데이터를 리사이클러뷰의 랜더링 사이즈 만큼 씩 보여줌
-* */
+- 검색된 결과(SAVE_ID)를 KEY로 FreshData 테이블에서 해당 id를 찾아 화면에 출력
+- SAVE_ID로 저장된 모든 데이터를 리사이클러뷰의 랜더링 사이즈 만큼 씩 보여줌
+ * */
 class SaveAdpater : PagingDataAdapter<FreshData, ItemViewHolder>(DIFF_CALLBACK) {
     /** 뷰홀더를 생성하여 반환 */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {

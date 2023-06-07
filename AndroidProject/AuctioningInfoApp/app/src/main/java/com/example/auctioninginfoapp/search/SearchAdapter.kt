@@ -13,6 +13,13 @@ import com.example.auctioninginfoapp.databinding.ListItemSaveitemBinding
 import com.example.auctioninginfoapp.model.FreshDao
 import com.example.auctioninginfoapp.model.SaveItem
 
+/** 검색화면(SearchFragment)에서 저장된 데이터를 리사이클러뷰에 보여주는 어댑터
+- PagingDataAdapter: 페이징 데이터(PagingData)를 RecyclerView에 표시하기 위한 기본 클래스
+- 선언 시 SearchAdapter가 PagingDataAdapter를 상속하고, 초기화시 DIFF_CALLBACK 객체를 넘겨줌
+- PagingData는 LiveData로 observe 중, 변경이 발생할 때마다 submitData()를 이용하여
+변경된 pagingData를 이곳 SearchAdapter로 전달되며, 어댑터는 DiffUtil 객체를 이용하여
+전달된 new PagingData와 기존 old PagingData를 비교하여 UI 갱신(변경된 PagingData만 갱신)
+ * */
 class SearchAdapter(val dao: FreshDao) :
     PagingDataAdapter<SaveItem, SearchAdapter.ItemViewHolder>(DIFF_CALLBACK) {
 

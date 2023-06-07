@@ -1,6 +1,5 @@
 package com.example.auctioninginfoapp.search
 
-import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -27,7 +27,7 @@ import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 
-
+/** 경락정보 검색 SearchFragment  */
 class SearchFragment : Fragment() {
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
@@ -133,16 +133,12 @@ class SearchFragment : Fragment() {
                         set(Calendar.DAY_OF_MONTH, dayOfMonth)
                     }.run {
                         /** 선택한 데이터를 2023-01-01와 같은 형식으로 가져오기 */
-                        /** 선택한 데이터를 2023-01-01와 같은 형식으로 가져오기 */
                         selectedDate = SimpleDateFormat("yyyy-MM-dd").format(currentCaldenar.time)
-                        /** 날짜 선택 여부를 체크하여 처리하기 위한 함수 호출
-                        - 선택한 날짜를 선택창에 표시 */
                         /** 날짜 선택 여부를 체크하여 처리하기 위한 함수 호출
                         - 선택한 날짜를 선택창에 표시 */
                         changeInputTextBydate()
                     }
                 },
-                /** DatePickerDialog의 Date를 오늘 날짜로 초기화)*/
                 /** DatePickerDialog의 Date를 오늘 날짜로 초기화)*/
                 currentCaldenar.get(Calendar.YEAR),
                 currentCaldenar.get(Calendar.MONTH),
